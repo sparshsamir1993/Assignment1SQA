@@ -11,18 +11,16 @@ namespace Assignment1SQA
             
             string choice = string.Empty;
             int choiceNum;
+            int[] sides = new int[3];
             Console.WriteLine("Enter your choice \n 1.Enter triangle sides \n 2. Exit");
             choice = Console.ReadLine();
-            while(!choice.Equals("1") && !choice.Equals("2"))
-            {
-                Console.WriteLine("Enter a valid value");
-                choice = Console.ReadLine();
-            }
+            choice = tri1.checkUserChoice(choice);
             choiceNum = int.Parse(choice);
+            
             if(choiceNum == 1)
             {
-                tri1.getSides();
-                string message = TriangleSolver.Analyse(tri1.sides);
+                sides = tri1.getSides();
+                string message = TriangleSolver.Analyse(sides);
                 Console.WriteLine(message);
             }
             else

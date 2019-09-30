@@ -5,7 +5,7 @@ namespace Assignment1SQA
 {
     public static class TriangleSolver
     {
-        public static string Analyse(float[] sides)
+        public static string Analyse(int[] sides)
         {
             if( (sides[0] + sides[1] >= sides[2]) && 
                 (sides[1] + sides[2] >= sides[0]) && 
@@ -30,5 +30,6 @@ namespace Assignment1SQA
             }
             
         }
+
     }
 }
