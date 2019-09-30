@@ -4,14 +4,14 @@ using System.Text;
 
 namespace Assignment1SQA
 {
-    class Triangle
+    public class Triangle
     {
         public float[] sides = new float[3];
         public void getSides()
         {
             for(int i=0; i<3; i++)
             {
-                Console.WriteLine("Enter length of side " + i);
+                Console.WriteLine("Enter length of side " + (i+1));
                 string side = Console.ReadLine();
                 float currSide;
                 while(!float.TryParse(side, out currSide))

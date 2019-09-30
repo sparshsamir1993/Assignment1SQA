@@ -8,7 +8,7 @@ namespace Assignment1SQA
 		{
 			Console.WriteLine("Hello World!");
             Triangle tri1 = new Triangle();
-
+            
             string choice = string.Empty;
             int choiceNum;
             Console.WriteLine("Enter your choice \n 1.Enter triangle sides \n 2. Exit");
@@ -22,6 +22,8 @@ namespace Assignment1SQA
             if(choiceNum == 1)
             {
                 tri1.getSides();
+                string message = TriangleSolver.Analyse(tri1.sides);
+                Console.WriteLine(message);
             }
             else
             {
