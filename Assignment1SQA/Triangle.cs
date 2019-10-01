@@ -14,7 +14,7 @@ namespace Assignment1SQA
                 Console.WriteLine("Enter length of side " + (i+1));
                 string side = Console.ReadLine();
                 int currSide;
-                while(!int.TryParse(side, out currSide))
+                while(!int.TryParse(side, out currSide) || currSide <= 0)
                 {
                     Console.WriteLine("Please enter a valid value");
                     side = Console.ReadLine();

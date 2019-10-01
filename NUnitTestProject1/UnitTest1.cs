@@ -50,7 +50,7 @@ namespace NUnitTestProject1
         public void Test5()
         {
             Triangle triChk = new Triangle();
-            int[] try1 = { 10, 10, 10 };
+            int[] try1 = { 1000, 1000, 1000 };
             Assert.AreEqual("Equilateral", TriangleSolver.Analyse(try1));
             Assert.Pass();
         }
@@ -58,16 +58,16 @@ namespace NUnitTestProject1
         public void Test6()
         {
             Triangle triChk = new Triangle();
-            int[] try1 = { 9, 1, 12 };
-            Assert.AreEqual("invalid", TriangleSolver.Analyse(try1));
+            int[] try1 = { 2147483647/2, 2147483647/2, 2147483647/2 };
+            Assert.AreEqual("Equilateral", TriangleSolver.Analyse(try1));
             Assert.Pass();
         }
         [Test]
         public void Test7()
         {
             Triangle triChk = new Triangle();
-            int[] try1 = { 4, 5, 3 };
-            Assert.AreEqual("Scalene", TriangleSolver.Analyse(try1));
+            int[] try1 = { 2147483647, 2147483647, 2147483647 };
+            Assert.AreEqual("invalid", TriangleSolver.Analyse(try1));
             Assert.Pass();
         }
         [Test]
